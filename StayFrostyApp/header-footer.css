@@ -1,57 +1,98 @@
-/* header-footer.css */
-
 /* Header Styles */
 header {
-    text-align: center;
     padding: 20px 0;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 12px; /* Slightly increased for spacing */
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F5F6F5; /* Soft off-white for better contrast */
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px; /* Increased spacing */
+    filter: drop-shadow(2px 2px 4px rgba(70, 130, 180, 0.4)); /* Blue-tinted shadow */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav-brand:hover .nav-logo {
+    transform: scale(1.15); /* Slightly larger scale on hover */
+    filter: drop-shadow(0 0 8px rgba(135, 206, 235, 0.6)); /* Glow effect */
+}
+
+.nav-brand span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem; /* Slightly larger for prominence */
+    font-weight: 700; /* Bolder for emphasis */
+    color: #FFFFFF; /* Pure white for clarity */
+    text-shadow: 0 0 6px rgba(70, 130, 180, 0.5); /* Softer blue shadow */
+    animation: slideIn 0.8s ease-out;
+}
+
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem; /* Slightly larger for readability */
+    font-weight: 300; /* Lighter weight for contrast with navbar */
+    font-style: italic; /* Italic for a stylish touch */
+    text-align: left;
+    color: #DCEFFE; /* Light blue tint for freshness */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow */
     animation: slideIn 0.8s ease-out;
 }
 
 .search-bar {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 12px; /* Slightly increased gap */
+    margin-top: 18px; /* More spacing below tagline */
 }
 
 input, button {
     padding: 12px;
     border-radius: 25px;
     border: none;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 input {
     width: 250px;
-    background: rgba(255, 255, 255, 0.95);
-    color: #333;
+    background: rgba(255, 255, 255, 0.9); /* Slightly less transparent */
+    color: #333333; /* Darker gray for contrast */
     outline: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
 }
 
 input:focus {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 12px rgba(135, 206, 235, 0.8); /* Blue glow */
     transform: scale(1.02);
+    background: #FFFFFF; /* Pure white on focus */
 }
 
 button {
-    background: #4682B4;
-    color: white;
+    background: #4682B4; /* Steel blue */
+    color: #FFFFFF;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-weight: 600; /* Bolder text */
 }
 
 button:hover {
-    background: #5A9BD4;
+    background: #5A9BD4; /* Lighter blue */
     transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Footer Styles */
@@ -67,13 +108,16 @@ button:hover {
 }
 
 .footer p {
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
     margin: 5px 0;
+    color: #F5F6F5; /* Off-white for footer text */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .footer a {
-    color: black;
+    color: #4682B4; /* Blue for links */
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -82,9 +126,9 @@ button:hover {
 }
 
 .footer a:hover {
-    color: #FFFFFF;
+    color: #87CEEB; /* Lighter blue on hover */
     text-decoration: underline;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 5px rgba(135, 206, 235, 0.8);
 }
 
 .github-logo {
@@ -96,12 +140,22 @@ button:hover {
 
 .footer a:hover .github-logo {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0 0 5px rgba(135, 206, 235, 0.8));
 }
 
 /* Media Queries for Header */
 @media (max-width: 768px) {
+    .nav-brand span {
+        font-size: 1.8rem; /* Adjusted for smaller screens */
+    }
     header h1 {
-        font-size: 2rem;
+        font-size: 1.3rem; /* Slightly larger than before */
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    input {
+        width: 80%;
     }
 }
