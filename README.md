@@ -1,4 +1,4 @@
-# WeatherNest
+# StayFrosty
 
 A simple weather forecasting web application built with HTML, CSS, and JavaScript. It uses the OpenWeatherMap API to fetch current weather, 5-day forecast, and hourly weather data for a given location.
 
