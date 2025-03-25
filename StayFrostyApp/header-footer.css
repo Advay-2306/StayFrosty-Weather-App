@@ -158,4 +158,14 @@ button:hover {
     input {
         width: 80%;
     }
+    header h1 {
+        font-size: 1.3rem; /* Slightly larger than before */
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    input {
+        width: 80%;
+    }
 }
