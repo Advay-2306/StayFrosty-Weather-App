@@ -1,6 +1,6 @@
 # StayFrosty
 
-A simple weather forecasting web application built with HTML, CSS, and JavaScript. It uses the OpenWeatherMap API to fetch current weather, 5-day forecast, and hourly weather data for a given location.
+A simple weather forecasting web application built with HTML, CSS, and JavaScript. It uses the OpenWeatherMap API to fetch current weather, 5-day forecast, and hourly weather data for a given location. It also uses Leaflet.js for implementing a world map, allowing the user to select any preferred location.
 
 ## Directory Structure
 - `weather_pics/`: Contains background images for different weather conditions.
