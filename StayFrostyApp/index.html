@@ -14,7 +14,13 @@
 <body>
 <div class="container">
     <header>
-        <h1>StayFrosty<br>Where the forecast stays fresh and crisp...</h1>
+        <nav class="navbar">
+            <a href="#" class="nav-brand">
+                <img src="weather_pics/logo.png" alt="StayFrosty Logo" class="nav-logo">
+                <span>StayFrosty</span>
+            </a>
+        </nav>
+        <h1>Where the forecast stays fresh and crisp...</h1>
         <div class="search-bar">
             <input type="text" id="search" placeholder="Enter city name">
             <button id="searchBtn">Search</button>
@@ -39,7 +45,7 @@
     <footer class="footer">
         <p>© 2025 StayFrosty. All rights reserved.</p>
         <p>
-            <a href="https://github.com/Advay-2306/StayFrosty-Weather-App" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Advay-2306/WeatherNest" target="_blank" rel="noopener noreferrer">
                 <img src="https://w7.pngwing.com/pngs/646/324/png-transparent-github-computer-icons-github-logo-monochrome-head-thumbnail.png" alt="GitHub Logo" class="github-logo"> GitHub
             </a>
         </p>
@@ -47,5 +53,5 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'925f47d06a09b0b1',t:'MTc0MjkxNDg1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
