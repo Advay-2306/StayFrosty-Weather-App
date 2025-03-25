@@ -18,15 +18,15 @@ let currentTimezoneOffset = 0;
 
 // Mapping weather conditions to background images
 const weatherBackgrounds = {
-    'clear_sky_day': '../weather_pics/clearskyday.jpg',
-    'clear_sky_night': '../weather_pics/clearnightsky.jpg',
-    'cloudy': '../weather_pics/overcastclouds.jpg',
-    'light_rain': '../weather_pics/rain.jpg',
-    'moderate_rain': '../weather_pics/rain.jpg',
-    'heavy_rain': '../weather_pics/rain.jpg',
-    'thunderstorm': '../weather_pics/thunderstorm.jpg',
-    'snow': '../weather_pics/snowfall.jpg',
-    'mist_haze': '../weather_pics/haze.jpg'
+    'clear_sky_day': 'weather_pics/clearnightsky.jpg',
+    'clear_sky_night': 'weather_pics/clearskyday.jpg',
+    'cloudy': 'weather_pics/overcastclouds.jpg',
+    'light_rain': 'weather_pics/rain.jpg',
+    'moderate_rain': 'weather_pics/rain.jpg',
+    'heavy_rain': 'weather_pics/rain.jpg',
+    'thunderstorm': 'weather_pics/thunderstorm.jpg',
+    'snow': 'weather_pics/snowfall.jpg',
+    'mist_haze': 'weather_pics/haze.jpg'
 };
 
 // Determine background based on weather and time
