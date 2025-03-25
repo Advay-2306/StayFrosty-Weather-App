@@ -18,15 +18,15 @@ let currentTimezoneOffset = 0;
 
 // Mapping weather conditions to background images
 const weatherBackgrounds = {
-    'clear_sky_day': '../weather_pics/clearskyday.jpg',
-    'clear_sky_night': '../weather_pics/clearnightsky.jpg',
-    'cloudy': '../weather_pics/overcastclouds.jpg',
-    'light_rain': '../weather_pics/rain.jpg',
-    'moderate_rain': '../weather_pics/rain.jpg',
-    'heavy_rain': '../weather_pics/rain.jpg',
-    'thunderstorm': '../weather_pics/thunderstorm.jpg',
-    'snow': '../weather_pics/snowfall.jpg',
-    'mist_haze': '../weather_pics/haze.jpg'
+    'clear_sky_night': 'weather_pics/clearnightsky.jpg',
+    'clear_sky_day': 'weather_pics/clearskyday.jpg',
+    'cloudy': 'weather_pics/overcastclouds.jpg',
+    'light_rain': 'weather_pics/rain.jpg',
+    'moderate_rain': 'weather_pics/rain.jpg',
+    'heavy_rain': 'weather_pics/rain.jpg',
+    'thunderstorm': 'weather_pics/thunderstorm.jpg',
+    'snow': 'weather_pics/snowfall.jpg',
+    'mist_haze': 'weather_pics/haze.jpg'
 };
 
 // Determine background based on weather and time
@@ -179,7 +179,7 @@ function displayCurrentWeather(dayData, city, date) {
     switch (weatherDesc) {
         case 'clear sky':
             if (isDaytime) {
-                gradient = 'linear-gradient(135deg, #FFD700, #87CEFA)';
+                gradient = 'linear-gradient(135deg,rgb(104, 173, 238), rgb(75, 214, 158))';
             } else {
                 gradient = 'linear-gradient(135deg, #1B263B, #415A77)';
             }
