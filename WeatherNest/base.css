@@ -1,0 +1,90 @@
+/* base.css */
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #87CEEB, #4682B4);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: gradientShift 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulseText {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    50% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+    100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Grouped body gradient classes */
+.clear-sky,
+.few-clouds,
+.clouds,
+.scattered-clouds,
+.broken-clouds,
+.smoke,
+.haze,
+.moderate-rain,
+.light-rain,
+.overcast-clouds,
+.default-weather {
+    animation: gradientShift 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    input {
+        width: 80%;
+    }
+    .weather-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .hourly-item {
+        width: 90px;
+        min-height: 110px;
+    }
+}
