@@ -33,7 +33,6 @@ const weatherBackgrounds = {
 function getWeatherBackground(weatherDesc, iconCode, timezoneOffset = 0) {
     // Validate iconCode
     if (!iconCode || typeof iconCode !== 'string') {
-        console.warn(`Invalid iconCode: ${iconCode}, defaulting to daytime`);
         iconCode = '01d';
     }
 
@@ -49,16 +48,11 @@ function getWeatherBackground(weatherDesc, iconCode, timezoneOffset = 0) {
     const timeOfDayFromTime = isDaytimeFromTime ? 'day' : 'night';
 
     const timeOfDay = timeOfDayFromIcon;
-    if (timeOfDayFromIcon !== timeOfDayFromTime) {
-        console.warn(`Day/Night mismatch: Icon (${iconCode}) says ${timeOfDayFromIcon}, but local time (${localHour}h) says ${timeOfDayFromTime}`);
-    }
     
     const normalizedDesc = weatherDesc.toLowerCase()
         .trim()
         .replace(/\s+/g, '_')
         .replace('clouds', '_clouds');
-    
-    console.log(`Normalized Description: ${normalizedDesc}, Time of Day: ${timeOfDay}, Icon: ${iconCode}, Local Hour: ${localHour}`);
     
     // Special handling for precipitation and extreme conditions
     if (weatherDesc.toLowerCase().includes('rain')) {
@@ -82,17 +76,12 @@ function getWeatherBackground(weatherDesc, iconCode, timezoneOffset = 0) {
     
     // Handle all cloud-like conditions with the same background
     if (weatherDesc.toLowerCase().includes('clouds')) {
-        console.log(`Cloudy weather detected: ${weatherDesc}, using overcastclouds.jpg`);
         return weatherBackgrounds['cloudy'];
     }
     
     // Handle clear sky
     const backgroundKey = `${normalizedDesc}_${timeOfDay}`;
     const background = weatherBackgrounds[backgroundKey] || weatherBackgrounds['clear_sky_day'];
-    if (!weatherBackgrounds[backgroundKey]) {
-        console.warn(`Background key "${backgroundKey}" not found, falling back to clear_sky_day`);
-    }
-    console.log(`Weather: ${weatherDesc}, Icon: ${iconCode}, Background Path: ${background}`);
     return background;
 }
 
@@ -144,7 +133,7 @@ async function getWeather(cityName = null, lat = null, lon = null) {
         displayForecast(initialWeather, initialStartDate, currentStartDate);
         displayHourlyWeather(forecastData, initialStartDate);
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error:', error); // Optional: Can be removed if user-facing message is sufficient
         weatherInfo.innerHTML = `Error fetching weather data: ${error.message}`;
     }
 }
@@ -189,7 +178,7 @@ function displayCurrentWeather(dayData, city, date) {
         case 'scattered clouds':
         case 'broken clouds':
         case 'overcast clouds':
-            gradient = 'linear-gradient(135deg,rgb(206, 209, 214),rgb(74, 99, 119))';
+            gradient = 'linear-gradient(135deg,rgba(158, 158, 158, 0.35),rgb(74, 99, 119))';
             break;
         case 'smoke':
             gradient = 'linear-gradient(135deg, #696969, #A9A9A9)';

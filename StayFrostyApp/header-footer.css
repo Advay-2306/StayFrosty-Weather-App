@@ -82,7 +82,8 @@ input:focus {
 }
 
 button {
-    background: #4682B4;
+    /* background: #4682B4; */
+    background-color: #c0274a;
     color: #FFFFFF;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -126,7 +127,7 @@ button:hover {
 }
 
 .footer a:hover {
-    color: #87CEEB;
+    color: #2f32cb;
     text-decoration: underline;
     text-shadow: 0 0 5px rgba(135, 206, 235, 0.8);
 }
